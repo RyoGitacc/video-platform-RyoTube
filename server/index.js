@@ -48,11 +48,6 @@ app.use((err,req,res,next)=>{
     })
 });
 
-app.use(express.static(path.resolve(__dirname, "./server/build")));
-// Step 2:
-app.get("*", function (request, response) {
-  response.sendFile(path.resolve(__dirname, "./server/build", "index.html"));
-});
 
 app.listen(process.env.PORT || 8800,()=>{
     connect();
