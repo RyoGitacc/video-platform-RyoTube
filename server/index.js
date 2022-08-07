@@ -8,7 +8,8 @@ import videoRoutes from './routes/video.js';
 import commentRoutes from './routes/comment.js';
 import authRoutes from './routes/auth.js';
 import cookieParser from 'cookie-parser';
-
+import * as path from 'path'
+// const path = require("path");
 
 const app=express();
 dotenv.config();
@@ -22,13 +23,16 @@ const connect =()=>{
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors( {
-origin: "http://localhost:3000",
-methods: ['GET', 'PUT', 'POST'],
-allowedHeaders: ['Content-Type', 'Authorization', 'x-csrf-token'],
-credentials: true,
-exposedHeaders: ['*', 'Authorization' ] 
-}));
+// app.use(cors(
+//      {
+// origin: "http://localhost:3000",
+// methods: ['GET', 'PUT', 'POST'],
+// allowedHeaders: ['Content-Type', 'Authorization', 'x-csrf-token'],
+// credentials: true,
+// exposedHeaders: ['*', 'Authorization' ] 
+// }
+// ));
+app.use(cors({origin: "https://simple-youtube.herokuapp.com",credentials: true,}));
 app.use("/api/auth",authRoutes);
 app.use("/api/users",userRoutes);
 app.use("/api/videos",videoRoutes);
@@ -43,7 +47,14 @@ app.use((err,req,res,next)=>{
         message,
     })
 });
-app.listen(8800,()=>{
+
+app.use(express.static(path.resolve(__dirname, "./server/build")));
+// Step 2:
+app.get("*", function (request, response) {
+  response.sendFile(path.resolve(__dirname, "./server/build", "index.html"));
+});
+
+app.listen(process.env.PORT || 8800,()=>{
     connect();
     console.log('server running');
 })
