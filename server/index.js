@@ -32,7 +32,7 @@ app.use(cookieParser());
 // exposedHeaders: ['*', 'Authorization' ] 
 // }
 // ));
-app.use(cors({origin: "https://simple-youtube.herokuapp.com",credentials: true,}));
+app.use(cors({origin: "https://relaxed-ganache-c8dc2c.netlify.app/",credentials: true,}));
 app.use("/api/auth",authRoutes);
 app.use("/api/users",userRoutes);
 app.use("/api/videos",videoRoutes);
