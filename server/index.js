@@ -1,4 +1,3 @@
-//const express=require('express');
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
@@ -7,9 +6,9 @@ import userRoutes from './routes/user.js';
 import videoRoutes from './routes/video.js';
 import commentRoutes from './routes/comment.js';
 import authRoutes from './routes/auth.js';
-import cookieParser from 'cookie-parser';
-import * as path from 'path'
-// const path = require("path");
+// import cookieParser from 'cookie-parser';
+
+
 
 const app=express();
 dotenv.config();
@@ -22,17 +21,13 @@ const connect =()=>{
 }
 
 app.use(express.json());
-app.use(cookieParser());
-// app.use(cors(
-//      {
-// origin: "http://localhost:3000",
-// methods: ['GET', 'PUT', 'POST'],
-// allowedHeaders: ['Content-Type', 'Authorization', 'x-csrf-token'],
-// credentials: true,
-// exposedHeaders: ['*', 'Authorization' ] 
-// }
-// ));
-app.use(cors({origin: "https://relaxed-ganache-c8dc2c.netlify.app",credentials: true,}));
+// app.use(cookieParser()); // need front and back ends to be same domain in order to set cookie 
+
+
+app.use(cors({origin: "https://video-platfrom-ryo-aoyama.netlify.app",credentials: true,}));
+// app.use(cors());
+
+
 app.use("/api/auth",authRoutes);
 app.use("/api/users",userRoutes);
 app.use("/api/videos",videoRoutes);

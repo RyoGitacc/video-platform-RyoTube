@@ -1,0 +1,207 @@
+.navbar{
+    height: 56px;
+    background-color: #181818;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    position: relative;
+    position: sticky;
+    top:0;
+    left: 0;
+    z-index: 100;
+}
+.logo-container{
+    width: 20%;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-family: 'League Gothic', sans-serif;
+    font-weight: 400;
+    font-size: 2.7rem;
+    letter-spacing: .5px;
+}
+.logo{
+    width: 30px;
+    aspect-ratio: 1.42 / 1;
+    margin-right: 5px;
+}
+.search-container{
+    width: 50%;
+    border: 1px solid #aaaaaa;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    /* overflow: hidden; */
+    position: relative;
+}
+.input{
+    width: calc(100% - 2rem - 20px);
+    height: 40px;
+    box-sizing: border-box;
+    background-color: #181818;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-left: 15px;
+    border-radius: 4px;
+}
+.input{
+    outline: none;
+}
+
+.avater-container{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.search-icon{
+    display: none !important;
+}
+.searchbar-mobile{
+    display: none;
+}
+.avater-wrapper{
+    position: relative;
+}
+.avater{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 10px;
+}
+.logout{
+    position: absolute;
+    top:100%;
+    left:-100%;
+    background-color: #181818;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0px 0px 5px 0px;
+}
+.logout-header{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 5px;
+}
+.logout-body{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    padding: 5px 20px;
+}
+.logout-body:hover{
+  background-color: rgb(199, 199, 199,.2);
+}
+.logout-icon{
+    font-size: 2rem !important;
+    color: white !important;
+}
+.logout-close{
+    color: #aaaaaa !important;
+}
+.signin-container{
+    display: flex;
+    align-items: center;
+}
+.signin-btn{
+    color: white;
+    background-color: #181818;
+    border: 1px solid #373737;
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 18px;
+    overflow: hidden;
+   
+}
+.link{
+    text-decoration: none;
+    color: #397fdb;
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.signin-icon{
+    color: #397fdb;
+    font-size: 2.2rem !important;
+    margin-right: 5px;
+}
+.link-mobile{
+    display: none;
+}
+.modal{
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media screen and (max-width:550px) {
+    .logo-container{
+        width: 30%;
+    }
+    .search-container{
+        display: none;
+    }
+    .avater-container{
+        width: 70%;
+    }
+    .search-icon{
+        display: inline !important;
+    }
+    .signin-btn{
+        display: none;
+    }
+    .link-mobile{
+        display: inline;
+    }
+
+    .modal{
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        opacity: 1;
+        visibility: visible;
+        background-color:#202020;
+        z-index: 500;
+    }
+   
+    .searchbar-mobile{
+        display: flex;
+        align-items: center;
+        padding: 20px 20px 20px 17px;
+        height: 80px;
+        box-sizing: border-box;
+    }
+    .arrow{
+        font-size: 2.5rem !important;
+        padding-right: 10px;
+        color: gray;
+    }
+    .input-mobile{
+        width: calc(100% - 3rem - 10px);
+        height: 40px;
+        box-sizing: border-box;
+        background-color: #181818;
+        border: none;
+        color: white;
+        padding-left:7px;
+        font-size: 1.5rem;
+        border-radius: 4px;
+    }
+    .input-mobile:focus{
+        outline: none;
+    }
+   
+}

@@ -27,6 +27,9 @@ const UserSchema = new mongoose.Schema({
     history:{
         type:[String]
     },
+    suggest:{
+        type:[String]
+    },
     fromGoogle:{
         type:Boolean,
         default:false

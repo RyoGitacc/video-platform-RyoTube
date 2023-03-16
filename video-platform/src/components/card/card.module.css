@@ -1,0 +1,94 @@
+.card{
+    flex:1 0 calc(100% / 4);
+    max-width: calc(100% / 4);
+    padding: 0 5px 30px 5px;
+    box-sizing: border-box;
+    background-color: #202020;
+}
+.link{
+    width: 100%;
+    text-decoration: none;
+    color: white;
+}
+.thumbnail{
+    width: 100%;
+    aspect-ratio: 1.77 / 1;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.body{
+    display: flex;
+    padding: 10px 0;
+}
+.avater-container{
+    padding-right: 10px;
+}
+.avater{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.text-container{
+    width: calc(100% - 42px);
+}
+
+.title{
+    height: 36px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+.username{
+    color: gray;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 2px;
+}
+.view-count{
+    color: gray;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media screen and (max-width:1000px) {
+    .card{
+        flex:1 0 calc(100% / 3);
+        max-width: calc(100% / 3);
+    }
+    
+}
+@media screen and (max-width:700px) {
+    .card{
+        flex:1 0 calc(100% / 2);
+        max-width: calc(100% / 2);
+    }
+    
+}
+@media screen and (max-width:550px) {
+    .card{
+        flex:1 0 calc(100% / 1);
+        max-width: calc(100% / 1);
+        padding: 0 0px 15px 0px;
+    }
+    .thumbnail{
+        border-radius: 0%;
+    }
+    .body{
+        padding: 10px;
+    }
+    
+}

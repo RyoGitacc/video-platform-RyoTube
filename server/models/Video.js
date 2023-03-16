@@ -5,6 +5,13 @@ const VideoSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
+    username:{
+        type:String,
+        required:true
+    },
+    userImg:{
+        type:String
+    },
     title:{
         type:String,
         required:true,
@@ -13,11 +20,11 @@ const VideoSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
-    imgUrl:{
+    img:{
         type:String,
         required:true,
     },
-    videoUrl:{
+    video:{
         type:String,
         required:true,
     },

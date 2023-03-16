@@ -1,0 +1,58 @@
+.comments{
+    
+}
+.comments-count{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 10px;
+}
+.comments-header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+.avater{
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.input-container{
+    width:100%;
+    position: relative;
+}
+.input{
+    width:100%;
+    height:32px;
+    background-color: #181818;
+    border:none;
+    border-bottom: 1px solid gray;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px;
+    box-sizing: border-box;
+    color: white;
+}
+.input:focus{
+    outline: none;
+    border-bottom: none;
+}
+.hr{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1.5px;
+    transform: translateX(-50%);
+    background-color: white;
+    transition: .5s width ease;
+}
+.input:focus + .hr{
+    width: 100%;
+}
+.submit-btn{
+    display: none;
+}

@@ -1,0 +1,43 @@
+.recommend{
+    height: 94px;
+    margin-bottom: 10px;
+}
+.link{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+.thumbnail{
+    width: 168px;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+    margin-right: 8px;
+    border-radius: 10px;
+}
+.text{
+    width: calc(100% - 176px);
+    height: 100%;
+}
+.title{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 5px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    word-wrap: break-word;
+}
+.username,.view-and-date{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: gray;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
